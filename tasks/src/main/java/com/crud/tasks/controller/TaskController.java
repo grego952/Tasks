@@ -35,6 +35,7 @@ public class TaskController {
 
     @DeleteMapping("deleteTask")
     public void deleteTask (@RequestParam Long taskId)  {
+        dbService.deleteTask(taskId);
 
     }
 
@@ -50,6 +51,5 @@ public class TaskController {
 
         Task task = taskMapper.mapToTask(taskDto);
         dbService.saveTask(task);
-
     }
 }
