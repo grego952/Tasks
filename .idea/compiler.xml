@@ -12,9 +12,6 @@
         <module name="tasks.tasks.main~1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="tasks.tasks.main" target="11" />
-      <module name="tasks.tasks.test" target="11" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>
