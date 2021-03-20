@@ -1,5 +1,6 @@
 package com.crud.tasks.domain;
 
+import com.crud.tasks.repository.TaskRepository;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
