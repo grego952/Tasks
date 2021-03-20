@@ -12,12 +12,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="tasks.tasks.main" />
-    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:8.0.23" level="project" />
     <orderEntry type="library" name="Gradle: io.springfox:springfox-swagger2:2.9.2" level="project" />
     <orderEntry type="library" name="Gradle: io.springfox:springfox-swagger-ui:2.9.2" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:2.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-validation:2.3.8.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-mail:2.3.8.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.16" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:2.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: io.springfox:springfox-swagger-common:2.9.2" level="project" />
@@ -46,6 +46,8 @@
     <orderEntry type="library" name="Gradle: org.springframework:spring-aspects:5.2.12.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate.validator:hibernate-validator:6.1.7.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish:jakarta.el:3.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context-support:5.2.12.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: com.sun.mail:jakarta.mail:1.6.5" level="project" />
     <orderEntry type="library" name="Gradle: com.jayway.jsonpath:json-path:2.4.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:2.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test:2.3.8.RELEASE" level="project" />
@@ -91,6 +93,7 @@
     <orderEntry type="library" name="Gradle: org.springframework:spring-jdbc:5.2.12.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.aspectj:aspectjweaver:1.9.6" level="project" />
     <orderEntry type="library" name="Gradle: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" name="Gradle: net.minidev:json-smart:2.3" level="project" />
     <orderEntry type="library" name="Gradle: jakarta.activation:jakarta.activation-api:1.2.2" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.6.3" level="project" />
@@ -112,8 +115,10 @@
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.13.3" level="project" />
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm:5.0.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.postgresql:postgresql:42.2.18" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.checkerframework:checker-qual:3.5.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.3" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.6.3" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="tasks.main" />
 </module>

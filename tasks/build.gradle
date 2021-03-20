@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.3.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	//id 'war'
 }
 
 group = 'com.crud'
@@ -26,6 +27,8 @@ dependencies {
 
 	testCompileOnly 'org.projectlombok:lombok:1.18.16'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
 	compile('io.springfox:springfox-swagger2:2.9.2')
 	compile('io.springfox:springfox-swagger-ui:2.9.2')

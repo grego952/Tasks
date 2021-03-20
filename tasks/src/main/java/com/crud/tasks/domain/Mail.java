@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 @Builder
 public class Mail {
 
