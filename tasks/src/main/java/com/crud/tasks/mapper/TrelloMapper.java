@@ -9,10 +9,6 @@ import java.util.stream.Collectors;
 @Component
 public class TrelloMapper {
 
-    public TrelloBoard mapToBoard (final TrelloBoardDto trelloBoardDto) {
-        return new TrelloBoard(trelloBoardDto.getId(), trelloBoardDto.getName(), mapToList(trelloBoardDto.getLists()));
-    }
-
     public List <TrelloBoard> mapToBoards (final List <TrelloBoardDto> trelloBoardDto) {
         return trelloBoardDto.stream()
                 .map(trelloBoard -> new TrelloBoard(trelloBoard.getId(), trelloBoard.getName(), mapToList(trelloBoard.getLists())))
