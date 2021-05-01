@@ -1,6 +1,7 @@
 package com.crud.tasks.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @Getter
 @AllArgsConstructor
 @Entity(name = "tasks")
+@EqualsAndHashCode
 public class Task {
 
     @Id
