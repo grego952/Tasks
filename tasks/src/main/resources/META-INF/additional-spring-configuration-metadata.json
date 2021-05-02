@@ -14,5 +14,10 @@
       "name": "trello.api.endpoint.prod",
       "type": "java.lang.String",
       "description": "Description for trello.api.endpoint.prod."
+    },
+    {
+      "name": "admin.mail",
+      "type": "java.lang.String",
+      "description": "Description for admin.mail."
     }
   ] }
