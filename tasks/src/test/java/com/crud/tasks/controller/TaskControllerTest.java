@@ -7,6 +7,7 @@ import com.crud.tasks.service.DbService;
 import com.google.gson.Gson;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -18,9 +19,10 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.List;
 
-import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 
 @SpringJUnitWebConfig
 @WebMvcTest(TaskController.class)
@@ -47,7 +49,7 @@ public class TaskControllerTest {
                 .perform(MockMvcRequestBuilders
                         .get("/v1/task/getTasks")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(1)));
     }
 
@@ -76,7 +78,7 @@ public class TaskControllerTest {
                 .perform(MockMvcRequestBuilders
                         .delete("/v1/task/deleteTask?taskId=1")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                .andExpect(status().isOk());
     }
 
     @Test
@@ -119,6 +121,7 @@ public class TaskControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .characterEncoding("UTF-8")
                         .content(jsonContent))
-                .andDo(print());
+                        .andExpect(status().is(200));
+        Mockito.verify(dbService, times(1)).saveTask(taskMapper.mapToTask(createdTaskDto));
     }
 }
